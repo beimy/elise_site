@@ -1,0 +1,27 @@
+{
+  "name": "elise_site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "develop": "concurrently \"cd server && npm run watch\" \"cd client && npm start\"",
+    "install": "cd server && npm i --force && cd ../client && npm i --force"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/beimy/elise_site.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/beimy/elise_site/issues"
+  },
+  "homepage": "https://github.com/beimy/elise_site#readme",
+  "dependencies": {
+    "concurrently": "^7.6.0",
+    "dotenv": "^16.0.3",
+    "gh-pages": "^4.0.0",
+    "react-dotenv": "^0.1.3"
+  }
+}
