@@ -13,6 +13,7 @@ import GoogleSheet from './components/GoogleSheetConnection';
 
 function App() {
   return (
+    <GoogleSheet>
     <Router>
         <div>
             <Nav />
@@ -36,6 +37,7 @@ function App() {
               </Routes>
         </div>
       </Router>
+    </GoogleSheet>
   );
 }
 
