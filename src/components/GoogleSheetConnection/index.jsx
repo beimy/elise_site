@@ -7,8 +7,13 @@ const GoogleSheet = () => {
         apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
         sheetId: process.env.REACT_APP_GOOGLE_SHEETS_ID,
     });
-    
+
     const [isLoading, setLoading] = useState(true);
+
+    useEffect(() => {
+        console.log(data);
+    })
+    
     
     if (loading) {
         return <div>Loading...</div>;
@@ -17,8 +22,11 @@ const GoogleSheet = () => {
       if (error) {
         return <div>Error!</div>;
       }
-      console.log(data);
-      return <div>{JSON.stringify(data)}</div>;
+
+      return (
+        <div>
+            {JSON.stringify(data)}
+        </div>);
     
 };
 
