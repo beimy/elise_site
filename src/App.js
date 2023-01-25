@@ -1,6 +1,7 @@
 //Package Imports
 import React, {useState, useEffect} from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { SiteProvider } from './utils/GlobalState';
 
 //Pages and Components
 import Nav from './components/Nav/index';
@@ -13,31 +14,33 @@ import GoogleSheet from './components/GoogleSheetConnection';
 
 function App() {
   return (
-    <GoogleSheet>
-    <Router>
-        <div>
-            <Nav />
-              <Routes>
-                <Route 
-                  path='/paintings'
-                  element={<PaintingsPage />}
-                  />
+    <SiteProvider>
+      <GoogleSheet>
+        <Router>
+          <div>
+              <Nav />
+                <Routes>
                   <Route 
-                  path='/drawings'
-                  element={<DrawingsPage />}
-                  />
-                  <Route 
-                  path='/lowdown'
-                  element={<InfoPage />}
-                  />
-                  <Route 
-                  path='/CV'
-                  element={<CV />}
-                  />
-              </Routes>
-        </div>
-      </Router>
-    </GoogleSheet>
+                    path='/paintings'
+                    element={<PaintingsPage />}
+                    />
+                    <Route 
+                    path='/drawings'
+                    element={<DrawingsPage />}
+                    />
+                    <Route 
+                    path='/lowdown'
+                    element={<InfoPage />}
+                    />
+                    <Route 
+                    path='/CV'
+                    element={<CV />}
+                    />
+                </Routes>
+          </div>
+        </Router>
+      </GoogleSheet>
+    </SiteProvider>
   );
 }
 
