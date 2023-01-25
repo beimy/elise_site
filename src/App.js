@@ -13,34 +13,34 @@ import GoogleSheet from './components/GoogleSheetConnection';
 
 
 function App() {
+  
   return (
-    <SiteProvider>
-      <GoogleSheet>
-        <Router>
+    <Router>
+      <SiteProvider>
+        <GoogleSheet />
           <div>
-              <Nav />
-                <Routes>
+            <Nav />
+              <Routes>
+                <Route 
+                  path='/paintings'
+                  element={<PaintingsPage />}
+                  />
                   <Route 
-                    path='/paintings'
-                    element={<PaintingsPage />}
-                    />
-                    <Route 
-                    path='/drawings'
-                    element={<DrawingsPage />}
-                    />
-                    <Route 
-                    path='/lowdown'
-                    element={<InfoPage />}
-                    />
-                    <Route 
-                    path='/CV'
-                    element={<CV />}
-                    />
-                </Routes>
+                  path='/drawings'
+                  element={<DrawingsPage />}
+                  />
+                  <Route 
+                  path='/lowdown'
+                  element={<InfoPage />}
+                  />
+                  <Route 
+                  path='/CV'
+                  element={<CV />}
+                  />
+              </Routes>
           </div>
-        </Router>
-      </GoogleSheet>
-    </SiteProvider>
+      </SiteProvider>
+    </Router>
   );
 }
 

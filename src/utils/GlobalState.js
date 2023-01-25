@@ -11,7 +11,7 @@ const SiteProvider = ({ value = [], ...props }) => {
         pic_data: [],
     });
 
-    console.log(state);
+    // console.log(state);
     return <Provider value={[state, dispatch]} {...props} />;
 };
 
