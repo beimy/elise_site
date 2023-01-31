@@ -19,9 +19,19 @@ const GoogleSheet = () => {
   }, [data]);
 
   function returnPicData(data) {
+    console.log(data);
+    // var mappedData = convertArrayToMap(data);
     dispatch({ type: GET_DATA_FROM_DB, new_pic_data : data})
+    // console.log(mappedData);
     setLoading(false);
   }
+
+  // function convertArrayToMap(data) {
+  //   console.log(data[0])
+    
+
+  //   return mappedData;
+  // }
   
   if (loading && isLoading) {
       return <div>Loading...</div>;

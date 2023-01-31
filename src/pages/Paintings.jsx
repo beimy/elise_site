@@ -6,10 +6,25 @@ import PaintingSingle from '../components/PaintingSingle';
 
 const PaintingsPage = () => {
 
+    const [state, dispatch] = useSiteContext();
+
+    console.log(state.pic_data);
+
     return (
         <div className='flex flex-col justify-center'>
             Paintings
-            <PaintingSingle></PaintingSingle>
+            {state.pic_data.map((pic) => {
+                        console.log(pic.title)
+                        return (
+                            <PaintingSingle
+                                key={pic.title}
+                                title={pic.title}
+                                description={pic.description}
+                                created_date={pic.created_date}
+                                url={pic.url}
+                            ></PaintingSingle>
+                        )
+                    })}
         </div>
         
     )
