@@ -1,6 +1,6 @@
 //Package Imports
 import React, {useState, useEffect} from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, redirect } from 'react-router-dom';
 import { SiteProvider } from './utils/GlobalState';
 
 //Pages and Components
@@ -13,6 +13,10 @@ import GoogleSheet from './components/GoogleSheetConnection';
 
 
 function App() {
+
+  useEffect(() => {
+    document.title = 'elise robinson'
+  });
   
   return (
     <Router>
@@ -22,12 +26,8 @@ function App() {
             <Nav />
               <Routes>
                 <Route 
-                  path='/paintings'
+                  path='/works'
                   element={<PaintingsPage />}
-                  />
-                  <Route 
-                  path='/drawings'
-                  element={<DrawingsPage />}
                   />
                   <Route 
                   path='/lowdown'

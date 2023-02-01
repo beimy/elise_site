@@ -1,14 +1,17 @@
 import React, { Fragment, useEffect } from 'react';
 import { useSiteContext } from '../../utils/GlobalState';
 
-const PaintingSingle = ({title, description, created_date, url }) => {
+const PaintingSingle = ({title, materials, dimensions, created_date, url }) => {
+
+    if (!url) {
+        return (
+            <div className=' hidden'></div>
+    )};
 
     return (
-        <div>
+        <div className='p-5 h-fit'>
+            <img className=' object-cover' src={url}></img>
             <p>{title}</p>
-            <p>{description}</p>
-            <p>{created_date}</p>
-            <img src={url} alt='missing'></img>
         </div>
     )
 };
