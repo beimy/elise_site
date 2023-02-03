@@ -1,7 +1,9 @@
 import {
     TEST,
     TOGGLE_ERROR_MODAL,
-    GET_DATA_FROM_DB
+    GET_DATA_FROM_DB,
+    SET_CURRENT_GALLERY_INDEX,
+    TOGGLE_GALLERY_MODAL
 } from './actions';
 import { useReducer } from 'react';
 
@@ -22,6 +24,16 @@ export const reducer = (state, action) => {
                 ...state,
                 pic_data: action.new_pic_data
             };
+        case SET_CURRENT_GALLERY_INDEX : 
+            return {
+                ...state,
+                current_gallery_index: action.new_gallery_index
+            };
+        case TOGGLE_GALLERY_MODAL : 
+        return {
+            ...state,
+            isGalleryOpen: !state.isGalleryOpen
+        };
         default: 
             return state;
     }

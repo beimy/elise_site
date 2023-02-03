@@ -26,17 +26,21 @@ function App() {
             <Nav />
               <Routes>
                 <Route 
-                  path='/works'
+                  path='/paintings'
                   element={<PaintingsPage />}
-                  />
-                  <Route 
+                />
+                <Route 
+                  path='/drawings'
+                  element={<DrawingsPage />}
+                />
+                <Route 
                   path='/lowdown'
                   element={<InfoPage />}
-                  />
-                  <Route 
+                />
+                <Route 
                   path='/CV'
                   element={<CV />}
-                  />
+                />
               </Routes>
           </div>
       </SiteProvider>

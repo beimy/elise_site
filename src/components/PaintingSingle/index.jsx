@@ -1,7 +1,17 @@
 import React, { Fragment, useEffect } from 'react';
 import { useSiteContext } from '../../utils/GlobalState';
+import { SET_CURRENT_GALLERY_INDEX, TOGGLE_GALLERY_MODAL } from '../../utils/actions';
 
-const PaintingSingle = ({title, materials, dimensions, created_date, url }) => {
+
+const PaintingSingle = ({title, materials, dimensions, created_date, url, index}) => {
+
+    const [state, dispatch] = useSiteContext();
+
+    function handleGalleryOpen(index) {
+        dispatch({ type: SET_CURRENT_GALLERY_INDEX, new_gallery_index : index});
+        dispatch({ type: TOGGLE_GALLERY_MODAL, isGalleryOpen : true});
+        console.log(index);
+    }
 
     if (!url) {
         return (
@@ -9,9 +19,9 @@ const PaintingSingle = ({title, materials, dimensions, created_date, url }) => {
     )};
 
     return (
-        <div className='p-5 h-fit'>
-            <img className=' object-cover' src={url}></img>
-            <p>{title}</p>
+        <div className='p-10 h-fit cursor-pointer' onClick={ () => handleGalleryOpen(index) }>
+            <img className=' object-cover hover:scale-105 m-1 ' src={url}></img>
+            <p className='m-2'>{title}</p>
         </div>
     )
 };
