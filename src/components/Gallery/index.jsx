@@ -37,11 +37,11 @@ const Gallery = () => {
     }
 
     return (
-        <div className="sliderWrap z-50 absolute">
-            <FontAwesomeIcon icon={faCircleXmark} className='btnClose' onClick={handleBtnClose }/>
-            <FontAwesomeIcon icon={faCircleChevronLeft} className='btnPrev' onClick={handleBtnPrev } />
-            <FontAwesomeIcon icon={faCircleChevronRight} className='btnNext' onClick={handleBtnNext }  />
-            <div className="fullScreenImage">
+        <div className="sliderWrap fixed top-0 bottom-0 left-0 right-0 z-40 bg-gray-700 flex align-middle justify-center w-full h-full ">
+            <FontAwesomeIcon icon={faCircleXmark} className='btnClose fixed cursor-pointer opacity-60 z-50 hover:opacity-100 top-16 right-16' onClick={handleBtnClose }/>
+            <FontAwesomeIcon icon={faCircleChevronLeft} className='btnPrev fixed cursor-pointer opacity-60 z-50 hover:opacity-100 top-1/2 left-16 transform:translateY(-50%)' onClick={handleBtnPrev } />
+            <FontAwesomeIcon icon={faCircleChevronRight} className='btnNext fixed cursor-pointer opacity-60 z-50 hover:opacity-100 top-1/2 right-16 transform:translateY(-50%)' onClick={handleBtnNext }  />
+            <div className="fullScreenImage flex align-middle justify-center m-24 opacity-100">
                 <img src={state.pic_data[state.current_gallery_index].url} alt='' />
             </div>
         </div>
