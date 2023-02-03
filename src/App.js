@@ -1,6 +1,6 @@
 //Package Imports
 import React, {useState, useEffect} from 'react';
-import { BrowserRouter as Router, Routes, Route, redirect } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { SiteProvider } from './utils/GlobalState';
 
 //Pages and Components
@@ -17,6 +17,8 @@ function App() {
   useEffect(() => {
     document.title = 'elise robinson'
   });
+
+  
   
   return (
     <Router>
@@ -41,6 +43,8 @@ function App() {
                   path='/CV'
                   element={<CV />}
                 />
+
+                <Route path="" element={ <Navigate to="paintings" /> }  />
               </Routes>
           </div>
       </SiteProvider>
