@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/paintings/static/css/main.1133e76d.css",
-    "main.js": "/paintings/static/js/main.c771b1b6.js",
+    "main.js": "/paintings/static/js/main.b36df11d.js",
     "static/js/787.bca1fffb.chunk.js": "/paintings/static/js/787.bca1fffb.chunk.js",
     "static/media/leesey_logo_rabbit.PNG": "/paintings/static/media/leesey_logo_rabbit.0381a12a3400466a3305.PNG",
     "index.html": "/paintings/index.html",
     "main.1133e76d.css.map": "/paintings/static/css/main.1133e76d.css.map",
-    "main.c771b1b6.js.map": "/paintings/static/js/main.c771b1b6.js.map",
+    "main.b36df11d.js.map": "/paintings/static/js/main.b36df11d.js.map",
     "787.bca1fffb.chunk.js.map": "/paintings/static/js/787.bca1fffb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1133e76d.css",
-    "static/js/main.c771b1b6.js"
+    "static/js/main.b36df11d.js"
   ]
 }
