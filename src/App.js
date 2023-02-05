@@ -28,7 +28,7 @@ function App() {
             <Nav />
               <Routes>
                 <Route 
-                  path='/paintings'
+                  path='/'
                   element={<PaintingsPage />}
                 />
                 <Route 
