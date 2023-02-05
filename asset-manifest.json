@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/elise_site/static/css/main.1133e76d.css",
-    "main.js": "/elise_site/static/js/main.c72a8f75.js",
-    "static/js/787.bca1fffb.chunk.js": "/elise_site/static/js/787.bca1fffb.chunk.js",
-    "static/media/leesey_logo_rabbit.PNG": "/elise_site/static/media/leesey_logo_rabbit.0381a12a3400466a3305.PNG",
-    "index.html": "/elise_site/index.html",
-    "main.1133e76d.css.map": "/elise_site/static/css/main.1133e76d.css.map",
-    "main.c72a8f75.js.map": "/elise_site/static/js/main.c72a8f75.js.map",
-    "787.bca1fffb.chunk.js.map": "/elise_site/static/js/787.bca1fffb.chunk.js.map"
+    "main.css": "/paintings/static/css/main.1133e76d.css",
+    "main.js": "/paintings/static/js/main.c771b1b6.js",
+    "static/js/787.bca1fffb.chunk.js": "/paintings/static/js/787.bca1fffb.chunk.js",
+    "static/media/leesey_logo_rabbit.PNG": "/paintings/static/media/leesey_logo_rabbit.0381a12a3400466a3305.PNG",
+    "index.html": "/paintings/index.html",
+    "main.1133e76d.css.map": "/paintings/static/css/main.1133e76d.css.map",
+    "main.c771b1b6.js.map": "/paintings/static/js/main.c771b1b6.js.map",
+    "787.bca1fffb.chunk.js.map": "/paintings/static/js/787.bca1fffb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.1133e76d.css",
-    "static/js/main.c72a8f75.js"
+    "static/js/main.c771b1b6.js"
   ]
 }
