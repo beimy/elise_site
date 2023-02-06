@@ -9,6 +9,7 @@ const SiteProvider = ({ value = [], ...props }) => {
         testAtt: 'test',
         errorModalOpen: false,
         pic_data: [],
+        drawing_data: [],
         current_gallery_index : 0,
         isGalleryOpen: false
     });

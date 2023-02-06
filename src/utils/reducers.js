@@ -3,7 +3,8 @@ import {
     TOGGLE_ERROR_MODAL,
     GET_DATA_FROM_DB,
     SET_CURRENT_GALLERY_INDEX,
-    TOGGLE_GALLERY_MODAL
+    TOGGLE_GALLERY_MODAL,
+    GET_DRAWINGS_FROM_DB
 } from './actions';
 import { useReducer } from 'react';
 
@@ -34,6 +35,11 @@ export const reducer = (state, action) => {
             ...state,
             isGalleryOpen: !state.isGalleryOpen
         };
+        case GET_DRAWINGS_FROM_DB :
+            return {
+                ...state,
+                drawing_data: action.new_drawing_data
+            }
         default: 
             return state;
     }

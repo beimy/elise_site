@@ -1,7 +1,7 @@
 import React, { Fragment, useEffect, useState } from 'react';
 import useGoogleSheets from 'use-google-sheets';
 import { useSiteContext } from '../../utils/GlobalState';
-import { GET_DATA_FROM_DB } from '../../utils/actions';
+import { GET_DATA_FROM_DB, GET_DRAWINGS_FROM_DB } from '../../utils/actions';
 
 const GoogleSheet = () => {
 
@@ -14,14 +14,16 @@ const GoogleSheet = () => {
 
   useEffect(() => {
     if(!loading) {
-      returnPicData((data[0].data));
+      returnPicData((data));
     }
   }, [data]);
 
   function returnPicData(data) {
     console.log(data);
-    const cleanData = imageValidation(data);
-    dispatch({ type: GET_DATA_FROM_DB, new_pic_data : cleanData})
+    const cleanPaintingData = imageValidation(data[0].data);
+    const cleanDrawingData = imageValidation(data[1].data);
+    dispatch({ type: GET_DATA_FROM_DB, new_pic_data : cleanPaintingData});
+    dispatch({ type: GET_DRAWINGS_FROM_DB, new_drawing_data : cleanDrawingData});
     setLoading(false);
   }
 
