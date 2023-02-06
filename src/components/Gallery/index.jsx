@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { useSiteContext } from '../../utils/GlobalState';
 import { SET_CURRENT_GALLERY_INDEX, TOGGLE_GALLERY_MODAL } from "../../utils/actions";
@@ -37,7 +37,7 @@ const Gallery = () => {
     }
 
     return (
-        <div className="sliderWrap fixed top-0 bottom-0 left-0 right-0 z-50 bg-gray-700 flex align-middle justify-center w-full h-full ">
+        <div className="sliderWrap fixed top-0 bottom-0 left-0 right-0 z-50 bg-black/[.50] flex align-middle justify-center w-full h-full overflow-hidden">
             <span className="btnClose fixed cursor-pointer opacity-60 z-50 hover:opacity-100 top-16 right-16" onClick={handleBtnClose }>
                 <FontAwesomeIcon icon={faCircleXmark} className='h-12 '/>
             </span>
