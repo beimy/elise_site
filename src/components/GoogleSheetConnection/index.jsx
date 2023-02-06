@@ -20,18 +20,22 @@ const GoogleSheet = () => {
 
   function returnPicData(data) {
     console.log(data);
-    // var mappedData = convertArrayToMap(data);
-    dispatch({ type: GET_DATA_FROM_DB, new_pic_data : data})
-    // console.log(mappedData);
+    const cleanData = imageValidation(data);
+    dispatch({ type: GET_DATA_FROM_DB, new_pic_data : cleanData})
     setLoading(false);
   }
 
-  // function convertArrayToMap(data) {
-  //   console.log(data[0])
-    
+  function imageValidation(dataToValidate) {
+    console.log(dataToValidate.length);
+    var returnData = dataToValidate;
+    dataToValidate.forEach((curr, index) => {
+      if (!curr.url) {
+        returnData.splice(index, 1);
+       }
+    })
+    return returnData;
+  }
 
-  //   return mappedData;
-  // }
   
   if (loading && isLoading) {
       return <div>Loading...</div>;
