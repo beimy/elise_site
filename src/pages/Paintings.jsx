@@ -12,7 +12,7 @@ const PaintingsPage = () => {
     console.log(state.pic_data[state.current_gallery_index]);
 
     return (
-        <div className='flex flex-wrap align-middle justify-center mx-48 my-36'>
+        <div className='flex flex-wrap align-middle justify-center mx-18 my-24'>
             {state.isGalleryOpen &&
                 <Gallery />
             }

@@ -19,9 +19,14 @@ const PaintingSingle = ({title, materials, dimensions, created_date, url, index}
     )};
 
     return (
-        <div className='p-10 h-fit cursor-pointer' onClick={ () => handleGalleryOpen(index) }>
-            <img className=' object-cover hover:scale-105 m-1 ' src={url}></img>
-            <p className='m-2'>{title}</p>
+        <div className='p-10 h-fit cursor-pointer self-center' onClick={ () => handleGalleryOpen(index) }>
+            <img className=' object-cover hover:scale-105 m-1 max-h-[40rem] max-w-[30rem]' src={url}></img>
+            <div  className='m-2'>
+                <p className=''>{title}</p>
+                <p className=''>{materials}</p>
+                <p className=''>{dimensions}</p>
+                <p className=''>{created_date}</p>
+            </div>
         </div>
     )
 };

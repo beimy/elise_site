@@ -37,10 +37,22 @@ const Gallery = () => {
     }
 
     return (
-        <div className="sliderWrap fixed top-0 bottom-0 left-0 right-0 z-40 bg-gray-700 flex align-middle justify-center w-full h-full ">
-            <FontAwesomeIcon icon={faCircleXmark} className='btnClose fixed cursor-pointer opacity-60 z-50 hover:opacity-100 top-16 right-16' onClick={handleBtnClose }/>
-            <FontAwesomeIcon icon={faCircleChevronLeft} className='btnPrev fixed cursor-pointer opacity-60 z-50 hover:opacity-100 top-1/2 left-16 transform:translateY(-50%)' onClick={handleBtnPrev } />
-            <FontAwesomeIcon icon={faCircleChevronRight} className='btnNext fixed cursor-pointer opacity-60 z-50 hover:opacity-100 top-1/2 right-16 transform:translateY(-50%)' onClick={handleBtnNext }  />
+        <div className="sliderWrap fixed top-0 bottom-0 left-0 right-0 z-50 bg-gray-700 flex align-middle justify-center w-full h-full ">
+            <span className="btnClose fixed cursor-pointer opacity-60 z-50 hover:opacity-100 top-16 right-16" onClick={handleBtnClose }>
+                <FontAwesomeIcon icon={faCircleXmark} className='h-12 '/>
+            </span>
+            <span className="btnPrev fixed cursor-pointer opacity-60 z-50 h-screen w-60 hover:opacity-100 top-1/2 left-16 transform:translateY(-50%)" onClick={handleBtnPrev }>
+                <FontAwesomeIcon icon={faCircleChevronLeft} className=' h-12'/>
+            </span>
+            <span className="btnNext fixed cursor-pointer opacity-60 z-50 h-screen w-60 hover:opacity-100 top-1/2 right-16 transform:translateY(-50%)" onClick={handleBtnNext }>
+                <FontAwesomeIcon icon={faCircleChevronRight} className='float-right h-12'/>
+            </span>
+            <div className="fixed top-64 right-60">
+                <p className="py-1 text-3xl">{state.pic_data[state.current_gallery_index].title}</p>
+                <p className="py-1 text-3xl">{state.pic_data[state.current_gallery_index].materials}</p>
+                <p className="py-1 text-3xl">{state.pic_data[state.current_gallery_index].dimensions}</p>
+                <p className="py-1 text-3xl">{state.pic_data[state.current_gallery_index].created_date}</p>
+            </div>
             <div className="fullScreenImage flex align-middle justify-center m-24 opacity-100">
                 <img src={state.pic_data[state.current_gallery_index].url} alt='' />
             </div>
