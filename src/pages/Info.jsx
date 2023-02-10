@@ -5,13 +5,17 @@ const InfoPage = () => {
 
     return (
         <div className='flex flex-col justify-center mx-96 my-24  px-5'>
-            <h2 className='pb-10 text-8xl'>Leesey Lowdown</h2>
-            <p className='text-4xl tracking-wider leading-[3]'>
+            <h2 className='pb-24 text-8xl'>The Lowdown</h2>
+            <p className='text-4xl tracking-wider leading-[2] text-justify'>
                 Leesey is a New York Based Artist whose work reflects her daily surroundings. From
                 bags of Takis to local gift shops of her youth, Leesey works with what she has access
                 to, often using leftover materials such as old desks and craft markers to complete her
                 works.
+                <br />
+                <br></br>
                 Here are some thoughts from the artist myself:
+                <br />
+                <br></br>
                 I feel like asking what does your art mean is like asking what the meaning of life is.
                 You could spin yourself in circles asking what is the point? What is the reason?
                 The reason is to have fun.
