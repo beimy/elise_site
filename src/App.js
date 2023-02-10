@@ -15,7 +15,7 @@ import GoogleSheet from './components/GoogleSheetConnection';
 function App() {
 
   useEffect(() => {
-    document.title = 'elise robinson'
+    document.title = 'leesey'
   });
 
   

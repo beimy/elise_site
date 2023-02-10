@@ -16,11 +16,14 @@ const Nav = ({}) => {
 
   return (
       <Menu as="div" className="relative flex text-left p-2 justify-between align-middle shadow-md z-100">
+        <div className='flex flex-row'>
           <Menu.Button as='img' alt='Leesey Logo' src={require('../../assets/leesey_logo_rabbit.PNG')}
             className="inline-flex text-warm-white justify-center max-h-36 hover:cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-red-accent"
               onClick={handleHomeClick}
             >
           </Menu.Button>
+          <h1 className=' font-tsblock text-pink-400 pb-6 text-6xl self-end'>Leesey</h1>
+        </div>
         <ul className='p-2 pb-4 align-middle justify-center self-end flex h-fit'>
           <Link className='nav-link' to={"/"}>Paintings</Link>
           <Link className='nav-link' to={"/drawings"}>Drawings</Link>

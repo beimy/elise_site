@@ -2,9 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "TSBLOCK";
+    src: url("../public/TS\ Block\ Bold.ttf");
+}
+
 @layer base {
+
+    
+
     .nav-link {
         @apply justify-center px-1 h-fit inline-block text-2xl hover:text-pink-400
     }
+
+
 
 }
